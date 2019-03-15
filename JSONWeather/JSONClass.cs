@@ -49,7 +49,7 @@ namespace JSONWeather
     public class Wind
     {
         [DataMember]
-        public int Speed { get; set; }
+        public double Speed { get; set; }
         [DataMember]
         public int Deg { get; set; }
     }
