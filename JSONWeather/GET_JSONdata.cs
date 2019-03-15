@@ -11,15 +11,15 @@ namespace JSONWeather
     public class GET_JSONdata
     {
         
-       public static JSONClass Data(string API, string City)
+       public static RootObject Data(string API, string City)
         {
             using (var webClient = new WebClient())
             {
                 var json = webClient.DownloadString(string.Format("http://api.openweathermap.org/data/2.5/weather?appid={0}&q={1}", API, City));
 
-                JSONClass jSON = JsonConvert.DeserializeObject<JSONClass>(json);
-                
+                RootObject jSON = JsonConvert.DeserializeObject<RootObject>(json);
 
+                
                 return jSON;
 
                 

@@ -10,9 +10,18 @@ namespace JSONWeather
     {
         static void Main()
         {
-            var JSONdata = GET_JSONdata.Data("6ff93bf8e8d4c916ca907ae6def4c864", "Bryansk");
+            string city = string.Empty;
 
-            Console.WriteLine();
+            Console.WriteLine("Введите город: ");
+            city = Console.ReadLine();
+            var JSONdata = GET_JSONdata.Data("6ff93bf8e8d4c916ca907ae6def4c864", city);
+
+            Console.WriteLine($"{JSONdata.Weather[0].Main} + {JSONdata.Visibility}");
+               
+
+
+
+
         }
     }
 }
