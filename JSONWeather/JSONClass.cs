@@ -36,9 +36,9 @@ namespace JSONWeather
         [DataMember]
         public double Temp { get; set; }
         [DataMember]
-        public int Pressure { get; set; }
+        public double Pressure { get; set; }
         [DataMember]
-        public int Humidity { get; set; }
+        public double Humidity { get; set; }
         [DataMember]
         public double Temp_min { get; set; }
         [DataMember]
@@ -51,21 +51,21 @@ namespace JSONWeather
         [DataMember]
         public double Speed { get; set; }
         [DataMember]
-        public int Deg { get; set; }
+        public double Deg { get; set; }
     }
 
     [DataContract]
     public class Clouds
     {
         [DataMember]
-        public int All { get; set; }
+        public double All { get; set; }
     }
 
     [DataContract]
     public class Sys
     {
         [DataMember]
-        public int Type { get; set; }
+        public double Type { get; set; }
         [DataMember]
         public int Id { get; set; }
         [DataMember]
