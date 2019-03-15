@@ -22,15 +22,13 @@ namespace JSONWeather
 
             stream.Position = 0;
 
-            StreamReader sr = new StreamReader(stream);
-
             var JSONFile = File.Create("JSON.txt");
 
             stream.Seek(0, SeekOrigin.Begin);
 
             stream.CopyTo(JSONFile);
 
-            Console.WriteLine("Файл с JSON создан: ");
+            Console.WriteLine("Файл с JSON создан.");
            
 
            
